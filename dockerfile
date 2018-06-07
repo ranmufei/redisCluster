@@ -2,7 +2,8 @@
 FROM hub.03in.com:5002/ranmufei/redis:alpine
 MAINTAINER ranmufei <ranmufei@qq.com>
 
-COPY /etc/localtime /etc/localtime
+#COPY /etc/localtime /etc/localtime
+COPY localtime /etc/localtime
 COPY redis.conf /data/redis.conf
 COPY sentinel.conf /data/sentinel.conf
 COPY start.sh /data/start.sh
